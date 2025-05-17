@@ -33,8 +33,11 @@ function getHumanChoice() {
         return paper
     } else if (humanChoice === "scissors") {
         return scissors
-    } else {
-        humanChoice = prompt("rock, paper or scissors ?")
+    }
+
+    while (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors") {
+        humanChoice = prompt("Please, choose betwenn rock, paper or scissors")
+        humanChoice = humanChoice.toLowerCase()
     }
 
     return humanChoice
